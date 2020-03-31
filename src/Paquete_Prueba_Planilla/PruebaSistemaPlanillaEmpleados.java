@@ -16,11 +16,11 @@ public class PruebaSistemaPlanillaEmpleados {
     public static void main(String[] args) {
 
         //Creamos objetos de las subclases
-        EmpleadoAsalariado empleadoAsalariado = new EmpleadoAsalariado("Fernando", "Blanco", "14789", 250.30);
-        EmpleadoPorHoras empleadoPorHoras = new EmpleadoPorHoras("Luis", "Gonzalez", "12345678", 10, 8);
+        EmpleadoAsalariado empleadoAsalariado = new EmpleadoAsalariado("Fernando", "Blanco", "14789", "123456", 250.30);
+        EmpleadoPorHoras empleadoPorHoras = new EmpleadoPorHoras("Luis", "Gonzalez", "12345678", "12345678910", 10, 8);
         EmpleadoPorComision empleadoPorComision = new EmpleadoPorComision("Mario", "Antonio",
-                "123456", 1000, .06);
-        EmpleadoBaseMasComision empleadoBaseMasComision = new EmpleadoBaseMasComision("Jose", "Rivera", "123456",
+                "123456", "12345678956", 1000, .06);
+        EmpleadoBaseMasComision empleadoBaseMasComision = new EmpleadoBaseMasComision("Jose", "Rivera", "123456", "12345678147",
                 1000, .04, 300);
 
         //crar un arreglo Empleado de cuatro elementos

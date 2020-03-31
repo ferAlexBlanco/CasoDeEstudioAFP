@@ -6,8 +6,8 @@ public class EmpleadoBaseMasComision extends EmpleadoPorComision {
 
     //constructor con sis argumentos 
     public EmpleadoBaseMasComision(String nombre, String apellido,
-            String nss, double ventas, double tarifa, double salario) {
-        super(nombre, apellido, nss, ventas, tarifa);
+            String nss,String DUI, double ventas, double tarifa, double salario ) {
+        super(nombre, apellido, nss,DUI, ventas, tarifa);
         establecerSalarioBase(salario);
     }
 

@@ -8,9 +8,9 @@ public class EmpleadoPorComision extends Empleado {
     private double tarifaComision;//porcentaje de comision
 
     //constructor de cinco argumentos
-    public EmpleadoPorComision(String nombre, String apellido, String nss,
+    public EmpleadoPorComision(String nombre, String apellido, String nss,String DUI,
             double ventas, double tarifa) {
-        super(nombre, apellido, nss);
+        super(nombre, apellido, nss,DUI);
         establecerVentasBrutas(ventas);
         establecerTarifaComision(tarifa);
     }
@@ -43,9 +43,9 @@ public class EmpleadoPorComision extends Empleado {
 
     public String toString() {
         return String.format("%s: %s\n%s; $%,.2f; %s: %.2f",
-                "empleado por comision", super.toString(),
-                "ventas brutas", obtenerVentasBrutas(),
-                "tarifa de comision", obtenerTarifaComision());
+                "Empleado por comision", super.toString(),
+                "Ventas brutas", obtenerVentasBrutas(),
+                "Tarifa de comision", obtenerTarifaComision());
     }
 
 }

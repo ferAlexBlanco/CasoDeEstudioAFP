@@ -8,9 +8,9 @@ public class EmpleadoPorHoras extends Empleado {
     private double horas; //horas trabajadas por semana
 
     //constructor de cinco argumentos 
-    public EmpleadoPorHoras(String nombre, String apellido, String nss,
+    public EmpleadoPorHoras(String nombre, String apellido, String nss,String DUI,
             double sueldoPorHoras, double horasTrabajadas) {
-        super(nombre, apellido, nss);
+        super(nombre, apellido, nss,DUI);
         establecerSueldo(sueldoPorHoras);//valida y almacena el sueldo por horas
         establecerHoras(horasTrabajadas);//valida y almacena las horas trabajadas
 
@@ -51,8 +51,8 @@ public class EmpleadoPorHoras extends Empleado {
 
     //devuelve representacion String de un objeto EmpleadoPorHoras
     public String toString() {
-        return String.format("empleado por horas: %s\n%s: $%,.2f; %s: %,.2f",
-                super.toString(), "sueldo por hora", obtenerSueldo(),
-                "horas trabajadas", obtenerHoras());
+        return String.format("Empleado por horas: %s\n%s: $%,.2f; %s: %,.2f",
+                super.toString(), "Sueldo por hora", obtenerSueldo(),
+                "Horas trabajadas", obtenerHoras());
     }
 }

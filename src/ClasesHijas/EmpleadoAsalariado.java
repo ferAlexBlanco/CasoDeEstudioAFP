@@ -7,8 +7,8 @@ public class EmpleadoAsalariado extends Empleado {
     private double salarioSemanal;
 
     //constrcutor de cuatro argumentos
-    public EmpleadoAsalariado(String nombre, String apellido, String nss, double salario) {
-        super(nombre, apellido, nss);//los pasa al constructor de Empleado
+    public EmpleadoAsalariado(String nombre, String apellido, String nss,String DUI, double salario) {
+        super(nombre, apellido, nss,DUI);//los pasa al constructor de Empleado
         establecerSalarioSemanal(salario);//valida y almacena el salario
 
     }
@@ -28,10 +28,13 @@ public class EmpleadoAsalariado extends Empleado {
     public double ingresos() {
         return obtenerSalarioSemanal();
     }
+    
+    
+    
 
     //devuelve representacion String de un objeto EmpleadoAsalariado
     public String toString() {
-        return String.format("empleado asalariado: %s\n%s: $%,.2f",
+        return String.format("Empleado asalariado: %s\n%s: $%,.2f",
                 super.toString(), "salario semanal", obtenerSalarioSemanal());
     }
 

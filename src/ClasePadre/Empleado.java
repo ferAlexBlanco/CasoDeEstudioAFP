@@ -6,13 +6,15 @@ public abstract class Empleado {
     private String primerNombre;
     private String apellidoPaterno;
     private String numeroSeguroSocial;
+    private String numeroIdentificacion;
 
     //Definir constructor con tres argumentos
-    public Empleado(String nombre, String apellido, String ISSS) {
+    public Empleado(String nombre, String apellido, String ISSS,String DUI) {
 
         primerNombre = nombre;
         apellidoPaterno = apellido;
         numeroSeguroSocial = ISSS;
+        numeroIdentificacion=DUI;
 
     }//Fin del constructor de empleado con tres argumentos
 
@@ -46,14 +48,27 @@ public abstract class Empleado {
     public String obtenerNumeroSeguroSocial() {
         return numeroSeguroSocial;
     }
+    
+    public void establecerNumeroIdentificacion(String DUI){
+        numeroIdentificacion=DUI;
+        
+    }
+    
+    public String obtenerNumeroIdentificacion(){
+        return numeroIdentificacion;
+        
+    }
 
     // devuelve representacion String de un objeto Empleado
     @Override
     public String toString() {
-        return String.format("%s %s\nnumero de seguro social: %s",
+        System.out.println("Afiliados\n");
+        System.out.println("Numero de dui: " + obtenerNumeroIdentificacion());
+        return String.format("%s %s\nNumero de seguro social: %s",
                 obtenerPrimerNombre(),
                 obtenerApellidoPaterno(),
-                obtenerNumeroSeguroSocial());
+                obtenerNumeroSeguroSocial()
+        );
     }
 
     //metodo abstracto sobrescrito por las subclases concretas
