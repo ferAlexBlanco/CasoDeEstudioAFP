@@ -1,16 +1,16 @@
 package ClasesHijas;
 
-import ClasePadre.Empleado;
+import ClasePadre.CuentaAFP;
 
-public class EmpleadoPorHoras extends Empleado {
+public class EmpleadoPorHoras extends CuentaAFP {
 
     private double sueldo; //sueldo por hora
     private double horas; //horas trabajadas por semana
 
     //constructor de cinco argumentos 
     public EmpleadoPorHoras(String nombre, String apellido, String nss,String DUI,
-            double sueldoPorHoras, double horasTrabajadas) {
-        super(nombre, apellido, nss,DUI);
+            double sueldoPorHoras, double horasTrabajadas,String estadoDeCuenta,String aportesRealizados) {
+        super(nombre, apellido, nss,DUI,estadoDeCuenta,aportesRealizados);
         establecerSueldo(sueldoPorHoras);//valida y almacena el sueldo por horas
         establecerHoras(horasTrabajadas);//valida y almacena las horas trabajadas
 

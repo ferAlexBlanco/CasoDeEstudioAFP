@@ -1,14 +1,15 @@
 package ClasesHijas;
 
-import ClasePadre.Empleado;
+import ClasePadre.CuentaAFP;
 
-public class EmpleadoAsalariado extends Empleado {
+public class EmpleadoAsalariado extends CuentaAFP {
 
     private double salarioSemanal;
 
     //constrcutor de cuatro argumentos
-    public EmpleadoAsalariado(String nombre, String apellido, String nss,String DUI, double salario) {
-        super(nombre, apellido, nss,DUI);//los pasa al constructor de Empleado
+    public EmpleadoAsalariado(String nombre, String apellido, String nss,String DUI, double salario,String
+            estadoDeCuenta,String aportesRealizados) {
+        super(nombre, apellido, nss,DUI,estadoDeCuenta,aportesRealizados);//los pasa al constructor de Empleado
         establecerSalarioSemanal(salario);//valida y almacena el salario
 
     }

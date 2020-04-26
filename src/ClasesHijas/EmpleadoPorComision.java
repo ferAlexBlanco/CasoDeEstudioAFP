@@ -1,16 +1,16 @@
 package ClasesHijas;
 
-import ClasePadre.Empleado;
+import ClasePadre.CuentaAFP;
 
-public class EmpleadoPorComision extends Empleado {
+public class EmpleadoPorComision extends CuentaAFP {
 
     private double ventasBrutas; //ventas totales por semana
     private double tarifaComision;//porcentaje de comision
 
     //constructor de cinco argumentos
     public EmpleadoPorComision(String nombre, String apellido, String nss,String DUI,
-            double ventas, double tarifa) {
-        super(nombre, apellido, nss,DUI);
+            double ventas, double tarifa,String estadoDeCuenta,String aportesRealizados) {
+        super(nombre, apellido, nss,DUI,estadoDeCuenta,aportesRealizados);
         establecerVentasBrutas(ventas);
         establecerTarifaComision(tarifa);
     }

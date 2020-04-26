@@ -1,20 +1,24 @@
 package ClasePadre;
 
 //La superclase abstracta Empleado
-public abstract class Empleado {
+public abstract class CuentaAFP {
 
     private String primerNombre;
     private String apellidoPaterno;
     private String numeroSeguroSocial;
     private String numeroIdentificacion;
+    private String estadoDeCuenta;
+    private String aportesRealizado;
 
     //Definir constructor con tres argumentos
-    public Empleado(String nombre, String apellido, String ISSS,String DUI) {
+    public CuentaAFP(String nombre, String apellido, String ISSS, String DUI, String EstadoDeCuenta, String aportesRealizados) {
 
         primerNombre = nombre;
         apellidoPaterno = apellido;
         numeroSeguroSocial = ISSS;
-        numeroIdentificacion=DUI;
+        numeroIdentificacion = DUI;
+        estadoDeCuenta = EstadoDeCuenta;
+        aportesRealizados = aportesRealizados;
 
     }//Fin del constructor de empleado con tres argumentos
 
@@ -48,15 +52,25 @@ public abstract class Empleado {
     public String obtenerNumeroSeguroSocial() {
         return numeroSeguroSocial;
     }
-    
-    public void establecerNumeroIdentificacion(String DUI){
-        numeroIdentificacion=DUI;
-        
+
+    public void establecerNumeroIdentificacion(String DUI) {
+        numeroIdentificacion = DUI;
+
     }
-    
-    public String obtenerNumeroIdentificacion(){
+
+    public String obtenerNumeroIdentificacion() {
         return numeroIdentificacion;
-        
+
+    }
+
+    public void establecerEstadoDeCuenta(String EstadoDeCuenta) {
+        estadoDeCuenta = EstadoDeCuenta;
+
+    }
+
+    public String obtenerEstadoDeCuenta() {
+        return estadoDeCuenta;
+
     }
 
     // devuelve representacion String de un objeto Empleado
@@ -64,6 +78,8 @@ public abstract class Empleado {
     public String toString() {
         System.out.println("Afiliados\n");
         System.out.println("Numero de dui: " + obtenerNumeroIdentificacion());
+        System.out.println("Estado de cuenta: " + obtenerEstadoDeCuenta());
+
         return String.format("%s %s\nNumero de seguro social: %s",
                 obtenerPrimerNombre(),
                 obtenerApellidoPaterno(),
